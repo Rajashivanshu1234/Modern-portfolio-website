@@ -1,1 +1,6 @@
-**/local-server.js
+local-server.js
+
+# Logs
+*.log
+local-server.err.log
+local-server.out.log
