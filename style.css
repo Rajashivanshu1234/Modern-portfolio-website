@@ -8,6 +8,10 @@ html{
     scroll-behavior: smooth;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 .container{
     z-index: 22;
     position: relative;
@@ -413,7 +417,7 @@ header ul a{
     margin-top: 0;
     max-width: 450px;
 }
-.proejct-info p{
+.project-info p{
     width: 90%;
     max-width: 400px;
     min-width: 300px;
@@ -740,282 +744,392 @@ footer h1{
     }
 }
 
-@media screen and (max-width :1000px){
-    .blackhole-box video{
-        margin-top: -20%;
+@media screen and (max-width: 1000px) {
+    .container {
+        gap: 60px;
     }
 
-    .hero-info h1{
-        font-size: 40px;
-        max-width: 400px;
-        line-height: 40px;
-    }
-    .hero-info p{
-        max-width: 300px;
-
-    }
-    .hero-vid-box{
-        right: 0;
-    }
-    .hero-vid-box video{
-        height: 500px;
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+        min-height: 70px;
+        padding: 12px 20px;
+        gap: 12px;
     }
 
-    .section-title{
-        font-size:30px;
+    .left {
+        gap: 10px;
     }
-    .info-cards{
-        grid-template-columns: auto;
-    }
-    .card:nth-child(3){
-        grid-column:span 2;
-        height: 70vh;
-    }
-    .indo-card.card h1{
-        font-size: 20px;
-    }
-    .card:nth-child(3) h1{
-        bottom: 25%;
-    }
-    .card video{
-        height: 65%;
-        margin-top: 5%;
-    }
-    .my-project{
-        margin-bottom: 300px;
-    }        
-    .project-vidbox{
-        width: 250px;
-    }
-    .project-info{
-        padding-left: 0;
-        margin-left: -50px;
 
+    .left img {
+        width: 60px;
+        margin: 0 10px 0 0;
     }
-    .project-info h1{
-        font-size: 200px;
-        max-width: 200px;
-        text-wrap: wrap;
+
+    header ul {
+        width: auto;
+        padding: 10px 14px;
+        border-radius: 40px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        gap: 10px;
     }
-     .project-info p{
-        font-size: 10px;
-        text-wrap: wrap;
-        max-width: 200px;
+
+    .box-icons {
+        gap: 18px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 120px 0 40px;
+        height: auto;
+    }
+
+    .hero-info {
+        position: static;
+        width: min(92%, 640px);
+        left: auto;
+        top: auto;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .hero-info h1 {
+        font-size: 48px;
+        max-width: 100%;
+        line-height: 56px;
+    }
+
+    .hero-info p {
+        max-width: 100%;
+        font-size: 18px;
+        margin: 0 auto 30px;
+    }
+
+    .hero-vid-box {
+        position: static;
+        width: min(100%, 640px);
+        margin-top: 30px;
+    }
+
+    .hero-vid-box video {
+        width: 100%;
+        height: auto;
+        max-height: 420px;
+    }
+
+    .scroll-down {
+        position: static;
+        margin: 22px auto 0;
+        left: auto;
+        bottom: auto;
+        transform: none;
+    }
+
+    .section-title,
+    .sectiontitle {
+        font-size: 32px;
+    }
+
+    .info-section {
+        width: min(95%, 1040px);
+        margin-top: 120px;
+    }
+
+    .info-cards {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .card {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 28px 24px 24px;
+    }
+
+    .card h1,
+    .card p,
+    .card button {
+        position: static;
+        width: 100%;
+        margin: 0 0 14px;
+    }
+
+    .card h1 {
+        font-size: 24px;
+    }
+
+    .card p {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 24px;
+        color: lightgray;
+    }
+
+    .card img,
+    .card video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-top: 0;
+        border-radius: 18px;
+    }
+
+    .card:nth-child(3),
+    .card:nth-child(4) {
+        grid-column: auto;
+        height: auto;
+    }
+
+    .my-project {
+        width: min(95%, 1040px);
+        margin-top: 140px;
+        margin-bottom: 120px;
+        align-items: stretch;
+        height: auto;
+    }
+
+    .project-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 28px;
+        height: auto;
+    }
+
+    .project-vidbox {
+        width: 100%;
         min-width: 0;
-     }
-     footer{
-        font-size: 20px;
+    }
 
-     }
+    .project-info {
+        width: 100%;
+        padding-left: 0;
+        margin-left: 0;
+        text-align: left;
+    }
 
+    .project-info h1 {
+        font-size: 28px;
+        max-width: 100%;
+    }
+
+    .project-info p {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .skills-section {
+        width: min(95%, 1040px);
+    }
+
+    .skills-box {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 40px 0;
+        gap: 26px;
+    }
+
+    .skills-image {
+        width: min(100%, 420px);
+        max-width: 480px;
+    }
+
+    .Designer,
+    .coder {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 20px;
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+
+    .Designer h1,
+    .coder h1 {
+        font-size: 30px;
+    }
+
+    .slider {
+        position: static;
+        width: 100%;
+        right: auto;
+        bottom: auto;
+        height: 120px;
+        margin: 0 auto;
+    }
+
+    .slider .list .item {
+        height: 120px;
+    }
+
+    .contact-session {
+        width: min(95%, 1040px);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+        padding: 30px 0 40px;
+        margin: 0 auto 40px;
+        height: auto;
+    }
+
+    .contact-session h1 {
+        position: static;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .social-box {
+        width: 100%;
+        gap: 18px;
+    }
+
+    .social-icons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .contact-box {
+        width: 100%;
+    }
+
+    .contact-box input {
+        width: 100%;
+    }
+
+    footer {
+        position: relative;
+        height: auto;
+        padding: 18px 20px;
+    }
+
+    footer h1 {
+        font-size: 14px;
+        line-height: 1.6;
+        max-width: 760px;
+        text-align: center;
+        margin: 0 auto;
+    }
 }
 
-/* mobile ke liiye  responsivenss */
-
-@media screen  and (max-width: 700px){
-      header{
+@media screen and (max-width: 700px) {
+    header {
         position: fixed;
-        height: 50px;
-      }
-      header ul{
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        padding: 10px 14px;
+        justify-content: space-between;
+    }
+
+    header ul,
+    .box-icons {
         display: none;
-      }
-      header .box-icons{
-        display: none;
-      }
-      header h1{
-        font-size: 25px;
-      }
-      .blackhole-box video{
-        margin-top: -16%;
     }
 
-    .hero{
-        flex-direction: column;
-    }
-    .autoBlur{
-        animation: none;
-    }
-    .hero-info{
-        bottom:5% ;
-    }
-    .scroll-down{
-        bottom: 5%}
-
-    .hero-info h1{
-        line-height: 50px;
-}
-.card video{
-    width: 100%;
-}
-.my-project{
-    margin-bottom: 600px;}
-    .project-card{
-        flex-direction:column ;
-        margin-left: 25%;
-        gap: 30px;
-
-    }
-    .project-info{
-        width: 85%;
-    }
-    .project-info h1{
-        text-wrap: nowrap;
-    }
-    .project-info p{
-        max-width: 300px;
-    }
-    .Designer{
-        top: 15%;
-        left: 18%;
+    .left img {
+        width: 54px;
     }
 
-    .Designer h1{
-        margin-bottom: 0;
-        margin-top: 70px;
+    .hero-info h1 {
+        font-size: 34px;
+        line-height: 42px;
     }
 
-    .coder{
-        top: 50%;
-        left: 18%;
+    .hero-info p {
+        font-size: 16px;
     }
 
-    .coder h1{
-        margin-bottom: 0;
+    .project-info h1 {
+        font-size: 24px;
     }
 
-    .slider .list .item img{
-        width: 70%;
-    }
-     .contact-section{
-        flex-direction: column;
-        margin-top: 100px;
-        margin-bottom: 50px;
+    .section-title,
+    .sectiontitle {
+        font-size: 28px;
     }
 
-    .footer{
-        font-size: 10px;
+    .slider {
+        height: 110px;
     }
 
-    .social-box{
-        margin-left: -90px;
+    .slider .list .item {
+        height: 110px;
     }
 }
 
 @media screen and (max-width: 480px) {
-
-    .hero .skills-video-box {
-        display: none;
-        
+    header {
+        padding: 10px 12px;
     }
 
-    .blackhole-box {
-        overflow: hidden;
+    .left img {
+        width: 48px;
     }
 
-    .blackhole-box video {
-        width: 140%;
-        margin-top: -27%;
-
+    .left h1 {
+        font-size: 18px;
     }
 
-    .left {
-        scale: 0.9;
-        margin-left: -30px;
+    .hero-info h1 {
+        font-size: 28px;
+        line-height: 34px;
     }
 
-    .left h2 {
-        font-size: 20px;
+    .hero-info p {
+        font-size: 15px;
     }
 
-    .hero {
-     scale: 0.9;
+    .hero-vid-box video {
+        max-height: 260px;
     }
 
-    .hero-info{
-        bottom: 15%;
+    .section-title,
+    .sectiontitle {
+        font-size: 24px;
     }
 
-    .hero-info h1{
-        font-size: 35px;
+    .project-info h1 {
+        font-size: 22px;
     }
 
-    .scroll-down{
-        bottom: 15%;
-        left: 60%;
+    .project-info p {
+        font-size: 14px;
     }
 
-    .section-title {
-        font-size: 25px;
-    }
-.info-cards{
-        display: flex;
-        flex-direction: column;
+    .contact-box button {
+        width: 100%;
     }
 
-    .card {
-        min-height: 20rem;
+    .social-box {
+        gap: 14px;
     }
 
-    .card h1{
-        bottom: 30%;
-        font-size: 5px;
+    .contact-session {
+        padding: 20px 0 30px;
     }
 
-    .project-card {
-        height: 50%;
+    footer h1 {
+        font-size: 13px;
+        max-width: 100%;
     }
-
-    .project-info p{
-        margin-bottom: 15px;
-    }
-
-.project-info{
-        margin-left: -80px;
-    }
-
-    .skills-box{
-        height: 120vh;
-        margin-right: 30px;
-    }
-
-    .slider{
-        bottom: 0%;
-    }
-
-    .contact-section{
-        scale: 0.9;
-        height: 120vh;
-    }
-
-    .contact-section .section-title {
-        top: -30px;
-        left: 25%;
-    }
-
-    .footer{
-        padding: 15px;
-    }
-
-    .footer h1{
-        max-width: 150px;
-    }
-    .footer .box-icons{
-        gap: 10px;
-    }
-
-
 }
 
-
-
-
-
-
-
-
-
 @keyframes hover-animation {
+
   0% {
     /* top:20%; */
     box-shadow: 0 0 5px rgb(255, 255, 255);
